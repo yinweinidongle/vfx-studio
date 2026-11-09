@@ -80,10 +80,8 @@ npm run test:e2e
 
 ## 发布到 GitHub Pages
 
-仓库是 [yinweinidongle/vfx-studio](https://github.com/yinweinidongle/vfx-studio)。项目站地址是 [https://yinweinidongle.github.io/vfx-studio/](https://yinweinidongle.github.io/vfx-studio/)。
+仓库是 [yinweinidongle/vfx-studio](https://github.com/yinweinidongle/vfx-studio)。
 
-工作流在 `.github/workflows/pages.yml`。`VITE_BASE` 固定为 `/vfx-studio/`，不要改成 `/`。构建后会检查 `dist/thumbs` 里有 12 张 JPEG，并且打包结果带有 `/vfx-studio/`。然后把 `dist` 作为 Pages artifact 部署。
+在线预览：[https://yinweinidongle.github.io/vfx-studio/](https://yinweinidongle.github.io/vfx-studio/)
 
-Pages 的 Build and deployment 必须选 GitHub Actions。只推代码不会自动打开 Pages。默认分支应是包含站点的 `main`。
-
-不要换成别的托管。工作流只部署 GitHub Pages。
+当前站点从 `gh-pages` 分支部署；源码在 `main`。构建时 `VITE_BASE` 固定为 `/vfx-studio/`。图库缩略图在 `public/thumbs/`，共 12 张。
